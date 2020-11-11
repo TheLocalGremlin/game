@@ -147,7 +147,11 @@ menu interogationStuart:
         s "Hardly detective, I am merely a humble servant of the family."
         d "Surely after serving the family for many years must have made even a little close to them?"
         s "I'm afraid that isn't within the parameters of my profession."
-        d ""
+        d "So you never expected more?"
+        s "Hmm{w=0.3}, I suppose I did on some level."
+        d "So even after all those years of service, you and Mr. Alston never became close?"
+        s "I'm afraid that Mr. Alston was very traditional with his views on help."
+        
 
     "That's it for now":
         jump interogationChoice
