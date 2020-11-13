@@ -11,7 +11,7 @@ define c = Character("Cecil Sharpe")
 define wi = Character("Wilbur Wyatt")
 define wa = Character("Wayne Howard")
 define i = Character("Ivy Galloway")
-define p = Character("Officer Grimes")
+define p = Character("Trooper Grimes")
 
 default MichaelDC = False
 
@@ -151,6 +151,9 @@ menu interogationStuart:
         s "Hmm{w=0.3}, I suppose I did on some level."
         d "So even after all those years of service, you and Mr. Alston never became close?"
         s "I'm afraid that Mr. Alston was very traditional with his views on help."
+        d "Could you elaborate on that?"
+        s "He believed that help should be invisible, never to be acknowledged."
+        s "Except for when it came to complaints of course."
         
 
     "That's it for now":
