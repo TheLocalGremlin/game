@@ -159,7 +159,7 @@ menu interogationStuart:
         $StuartDC = True
         jump interogationStuart
 
-    "Whereabouts that night.":
+    "Whereabouts that night":
         show stuart neutral
         d "Can you recall what happened on the night of Mr. Alston's murder?"
         s "Ah, yes.{w=0.3} I was serving the guests and then cleaned while the party was winding down and then excused the rest of the house staff."
@@ -205,7 +205,35 @@ label interogationMarcellaIntro:
     ma "Why am I here!"
     d "We just have a few questions to ask about your husband."
     ma "I am a suspect aren't I?"
-    me "I am grieving detective, show some res"
+    ma "How could you do this to a newly widowed woman? how some respect."
+    d "Ma'am, this is simply an investigation and if you refuse to collaborate it's going to turn into a bigger thing than it needs to."
+    ma "Fine."
+    ma "What do you want from me?"
+    jump interogationMarcella
+
+menu interogationMarcella:
+    "What would you like to ask?"
+
+    "Whereabouts that night":
+        d "Can you tell what you did that night?"
+        ma "I was enjoying my night{w=0.3}, just like everyone else."
+        d "I'm going to need some specifics Mrs. Alston."
+        ma "I went out for a walk detective, I didn't see anything of interest though."
+        d "Why did you for a walk?"
+        ma "The young Miss Galloway and I got into a{w=0.3}...disagreement."
+        d "Over what?"
+        ma "Those are private details detective."
+        d "It could help the investigation."
+        ma "I said that it was private."
+        d "Ma'am, I can arrest you for impeding an investigation and refusing to cooperate."
+        ma "How DARE you!"
+        ma "Do you know who you're talking to?{w=0.3} Threatening a poor widow like that. Do you have no shame?"
+        d "I'll have to write it up then, we can settle this in court."
+        ma "..."
+        ma "I'll tell you. {w=0.3}You bastard."
+        ma "I had reason to believe that my husband was having an affair{w=0.3}, with Ms. Galloway."
+        
+
 
 
 
