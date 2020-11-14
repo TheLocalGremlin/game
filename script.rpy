@@ -30,7 +30,7 @@ menu interogationChoice:
         jump interogationStuart
 
     "Marcella Alston":
-        jump interogationMarcella
+        jump interogationMarcellaIntro
 
     "Cecil Sharpe":
         jump interogationCecil
@@ -199,6 +199,13 @@ menu interogationStuart:
 
     "That's it for now":
         jump interogationChoice
+
+label interogationMarcellaIntro:
+    "Trooper Grimes brings in a furious Marcella Alston."
+    ma "Why am I here!"
+    d "We just have a few questions to ask about your husband."
+    ma "I am a suspect aren't I?"
+    me "I am grieving detective, show some res"
 
 
 
