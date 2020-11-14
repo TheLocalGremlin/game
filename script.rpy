@@ -141,44 +141,60 @@ menu interogationStuart:
     "What would you like to ask?"
 
     "Relationship to Scott Alston":
+        show stuart neutral
         d "What was your relationship with Mr. Alston?"
+        show stuart proud
         s "Let's see...{w=0.3} I have been serving the family for several decades."
         s "I was here to watch his son grow up, and was even here to watch Mr. Alston grow up for a while."
         d "You must have been close to him then."
+        show stuart neutral
         s "Hardly detective, I am merely a humble servant of the family."
         d "Surely after serving the family for many years must have made even a little close to them?"
+        show stuart bitter
         s "I'm afraid that isn't within the parameters of my profession."
         d "So you never expected more?"
+        show stuart neutral
         s "Hmm{w=0.3}, I suppose I did on some level."
+        hide stuart
         $StuartDC = True
         jump interogationStuart
 
     "Whereabouts that night.":
+        show stuart neutral
         d "Can you recall what happened on the night of Mr. Alston's murder?"
         s "Ah, yes.{w=0.3} I was serving the guests and then cleaned while the party was winding down and then excused the rest of the house staff."
         d "That sounds like it must have been a lot of work."
+        show stuart proud
         s "It usually is but I take in my hard work detective."
+        hide stuart
         jump interogationStuart
 
     "Push about relationship with his employer" if StuartDC == True:
+        show stuart neutral
         d "So even after all those years of service, you and Mr. Alston never became close?"
+        show stuart proud
         s "I'm afraid that Mr. Alston was very traditional with his views on help."
         d "Could you elaborate on that?"
         s "He believed that help should be invisible, never to be acknowledged."
         d "Being the head of a weapons manufacturing empire, I'd imagine that he was very detail oriented."
+        show stuart bitter
         s "Detail oriented is undercutting it by a large sum detective."
         s "The only time he would actually converse with me was to make complaints about my work."
         s "He would routinely berate and slander the hard work of both me and my staff."
         d "That must have been infuriating."
+        show stuart anger
         s "Oh let me tell you detective, it was absolutely outrageous. All those years of service and not a single word of gratitude."
         d "Sounds like you were bitter towards Mr. Alston."
         s "Just biter is just rich. At times  I could barely stand him and his self-centered, arrogant world views."
         s "And the {i}nerve{/i} to TELL ME I'M A BAD BUTLER!"
+        show stuart proud
         s "Oh."
+        show stuart neutral
         s "It seems I lost my composure there detective."
         s "Very unprofessional of me{w=0.3}, please excuse my behavior."
         s "I did what I was told to do and served the Alston's to the best of my abilities."
         s "It's a shame that the old Mr. passed away so suddenly."
+        hide stuart
         jump interogationStuart
 
     "That's it for now":
