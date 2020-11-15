@@ -15,6 +15,7 @@ define p = Character("Trooper Grimes")
 
 default MichaelDC = False
 default StuartDC = False
+default MarcellaDC = False
 
 label start:
     scene bg room
@@ -202,41 +203,83 @@ menu interogationStuart:
 
 label interogationMarcellaIntro:
     "Trooper Grimes brings in a furious Marcella Alston."
-    ma "Why am I here!"
+    show marcella disdain
+    ma "Why am I here?"
     d "We just have a few questions to ask about your husband."
     ma "I am a suspect aren't I?"
+    show marcella anger
     ma "How could you do this to a newly widowed woman? how some respect."
     d "Ma'am, this is simply an investigation and if you refuse to collaborate it's going to turn into a bigger thing than it needs to."
+    show marcella neutral
     ma "Fine."
     ma "What do you want from me?"
+    hide marcella
     jump interogationMarcella
 
 menu interogationMarcella:
     "What would you like to ask?"
 
+     "Relationship with Scott Alston":
+        show marcella neutral
+        d "Can you tell me about your relationship with your husband?"
+        ma "He wasnt't the same charming buisinessman I met in France.{w=0.3} The man who promised me the world and took me back to America with him."
+        show marcella disdain
+        ma "Those feelings died out long ago, but it's not like I have anything to return to and I am not going to live out there on the streets with the dirty rabble."
+        ma "Just imagine the filth{w=0.3}, the illnesses they must have."
+        d "So you were stuck here with him then?"
+        show marcella neutral
+        ma "Indeed, and I must admit I have hated every second of the past 20 years but there was never a chance to leave him."
+        ma "Without his income I would I have to live in the lice filled shacks with all the other peasantry."
+        hide marcella
+        jump interogationMarcella
+
     "Whereabouts that night":
+        show marcella neutral
         d "Can you tell what you did that night?"
+        show marcella disdain
         ma "I was enjoying my night{w=0.3}, just like everyone else."
         d "I'm going to need some specifics Mrs. Alston."
+        show marcella neutral
         ma "I went out for a walk detective, I didn't see anything of interest though."
         d "Why did you for a walk?"
         ma "The young Miss Galloway and I got into a{w=0.3}...disagreement."
         d "Over what?"
+        show marcella disdain
         ma "Those are private details detective."
         d "It could help the investigation."
         ma "I said that it was private."
         d "Ma'am, I can arrest you for impeding an investigation and refusing to cooperate."
+        show marcella anger
         ma "How DARE you!"
         ma "Do you know who you're talking to?{w=0.3} Threatening a poor widow like that. Do you have no shame?"
         d "I'll have to write it up then, we can settle this in court."
+        show marcella disdain
         ma "..."
+        show marcella neutral
         ma "I'll tell you. {w=0.3}You bastard."
+        show marcella disdain
         ma "I had reason to believe that my husband was having an affair{w=0.3}, with Ms. Galloway."
-        
+        d "Why do you think that?"
+        show marcella neutral
+        ma "Miss Galloway had...been spending the night here in anticipation for the dinner."
+        ma "Three days before his death my husband had been working late in his study and he never came to bed."
+        show marcella disdain
+        ma "Something he only started doing since Miss Galloway came to the house."
+        ma "I had walked over to his office to check on him when I heard...noises coming from inside."
+        ma "I knocked on the door at first before slamming it open and there I saw the pig desperately tring to button his shirt."
+        ma "The room was empty but the window had been opened."
+        d "You think the person he was having an affair with escaped through the window?"
+        ma "Of course, I knew he was up to something and after sending the fool to bed I searched the room and sure as day I found a hairpin in the rug."
+        d "And you believe it was Ms. Galloway?"
+        show marcella neutral
+        ma "Yes, the problems only started after he spending more tiem with her and that night only proved my suspicions."
+        d "How did he and Ms. Galloway know each other?"
+        ma "He was introduced to her through his work associates and...they quickly became close"
+        d "You must have been quite angry with your husband after finding out that he was cheating on you."
+        show marcella disdain
+        ma "Believe me detective, I was. That filthy pig could not not even stay loyal to his wife."
+        hide marcella
+        jump interogationMarcella
 
-
-
-
-
-
-
+    "That's it for now":
+        jump interogationChoice
