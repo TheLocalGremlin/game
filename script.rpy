@@ -283,3 +283,24 @@ menu interogationMarcella:
 
     "That's it for now":
         jump interogationChoice
+
+menu interogationCecil:
+    "What would you like to ask?"
+
+    "Relationship with Scott Alston":
+        d "Can you explain how you knew Mr. Alston."
+        c "I tutored his son in college{w=0.3}, we shared a physics class and were quite close."
+        c "Am I a suspect?"
+        d "I'm the one asking the questions here Mr. Sharpe."
+        c "Of course, sorry.{w=0.3} Continue."
+        c "Anyways{w=0.3}, after I graduated I began teaching and began conducting my own studies and experiments."
+        c "Mr. Alston took a personal interest in my findings and made a deal to to fund my ventures as long as he could use my research to help him build more weapons."
+        jump interogationCecil
+
+    "Whereabouts that night":
+        d "Can you tell me about what happened that night?"
+        c "Well, I had dinner with the Alston family and their friends and after that I spent the night here."
+        d "Did anything noteworthy happen that night?"
+        c "Yes{w=0.3}, there was an argument that broke out between Michael and Mr. Alston."
+        d ""
+        
