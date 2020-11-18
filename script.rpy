@@ -16,6 +16,7 @@ define p = Character("Trooper Grimes")
 default MichaelDC = False
 default StuartDC = False
 default MarcellaDC = False
+default CecilDC = False
 
 label start:
     scene bg room
@@ -295,6 +296,7 @@ menu interogationCecil:
         c "Of course, sorry.{w=0.3} Continue."
         c "Anyways{w=0.3}, after I graduated I began teaching and began conducting my own studies and experiments."
         c "Mr. Alston took a personal interest in my findings and made a deal to to fund my ventures as long as he could use my research to help him build more weapons."
+        $CecilDC = True
         jump interogationCecil
 
     "Whereabouts that night":
@@ -302,5 +304,37 @@ menu interogationCecil:
         c "Well, I had dinner with the Alston family and their friends and after that I spent the night here."
         d "Did anything noteworthy happen that night?"
         c "Yes{w=0.3}, there was an argument that broke out between Michael and Mr. Alston."
-        d ""
+        d "An argument between your boss and your friend.{w=0.3} It must be difficult to choose a side in that scenario."
+        c "Oh, I would never get involved their familial issues."
+        d "Of course."
+        jump interogationCecil
+
+    "Push relationship with Scott Alston" if CecilDC = True:
+        d "You said that Scott was paying you to research new alternatives for weapons?."
+        c "Among other things. Yes, he was."
+        d "How long have you been working for Mr. Alston?"
+        c "Uhh, maybe 3 or 4 years now?"
+        d "Not very long then."
+        d "What breakthroughs have you made so far?"
+        c "Haha, uh.{w=0.3} Well."
+        c "I-uh, had this idea of{w=0.3} increasing efficiency through{w=0.3} streamlining innovation."
+        d "I'm assuming not a lot of progress then."
+        c "I've been distracted from my work lately. A lot of things happening."
+        d "I'm assuming Mr. Alston wasn't too happy with those results."
+        c "No, he wasn't. He's been increasingly disappointed and annoyed. Lately he even threatened to cut my fundings for my projects."
+        d "That must have put a lot of pressure on you."
+        c "Of course! I need the funds to pay for my home and necessities!"
+        jump interogationCecil
         
+    "Push relationship with Michael Alston" if CecilDC = True:
+        d "You said that you were friends with Michael Alston in college?"
+        c "Yes, we were dormmates our first year and stayed friends for the rest of our education."
+        d "Are you still close?"
+        c "I would say so, yes."
+        d "You must be happy then to hear that he's inheriting the family empire."
+        c "Very. He's always been telling me about all the things he'd do if he were in charge."
+        c "The changes he'd make. The ideas he had."
+        d "Would you still be collaborating with the company with Michael in charge?"
+        c "Of course, he had told me that if he were in charge he would grant me more resources and a higher pay."
+        d "So, to put it  into perspective. You'd benefit greatly from Mr. Scott Alston's death?"
+        c "I-I don't like your insinuation here detective."
