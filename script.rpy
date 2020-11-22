@@ -38,7 +38,7 @@ menu interogationChoice:
         jump interogationCecil
 
     "Wilbur Wyatt":
-        jump interogationWilbur
+        jump interogationWilburIntro
 
     "Wayne Howard":
         jump interogationWayne
@@ -362,3 +362,52 @@ menu interogationCecil:
 
     "That's all for now":
         jump interogationChoice
+
+label interogationWilburIntro:
+    d "Mr. Wyatt, welcome."
+    wi "Can I call my lawyer?"
+    d "You won't be needing them, we just want to ask you a few questions."
+    wi "I don't think that would be wise.{w=0.3} I've always been told to contact my attorney should I ever end up in a conversation with the authorities."
+    d "I just need a bit of information. Otherwise I'd have to keep you here until your lawyer arrived."
+    d "And that would take some time."
+    wi "That's{w=0.3}...true. Perhaps I could answer some questions."
+    wi "Fine."
+
+menu interogationWilbur:
+    "What would you like to ask?"
+
+    "Relationship with Scott.":
+        d "Could you please explain what your relationship was to Scott Alston."
+        wi "Ah yes, Scott and I were college friends you see."
+        wi "We got to know each other during our economics classes and we kept in contact after we graduated."
+        d "From what I understand, you and Mr. Alston were rivals."
+        wi "Professionally, but not privately."
+        wi "At least, that's how it used to be"
+        d "Oh? How so?"
+        wi "I hate to admit it{w=0.3}, but lately he had been treating our friendly rivalry more seriously."
+        wi "Before, we were weren't inclined towards running each other out of buisiness, but now?"
+        wi "He's put my company under more pressure and to be quite frank, it's been taxing trying to keep up."
+        wi "I've lost quite a few customers due to his backhandedness."
+        d "Did you ever confront him about it?"
+        wi "And let him know he was getting under my skin? Of course not!"
+        wi "Besides, it was quite obvious that he knew what he was doing. He's been extremely smug."
+        wi "He knew he was forcing me out of buisiness."
+        d "You must have felt betrayed."
+        wi "I did, detective.{w=0.3} It was always us two running the scene, u til he decided to stab me in the back."
+        wi "He started lowering prices and actively started encroaching on my own usual buyers."
+        d "That must have felt unfair."
+        wi "Of course it did.{w=0.3} I must be honest with you detective, the economic situation might be even worse than how I'm making it out to be."
+        wi "I'm almost facing bankruptcy, I can barely even spare the expenses of the suit I'm wearing."
+        d "And this was all because of Scott."
+        wi "Indeed. God, I hated his guts."
+        jump interogationWilbur
+
+    "Whereabouts that night.":
+        d "What were you doing the night of Scott Alston's death?"
+        wi "Not much. The most notable thing that happened that night was probably the argument during dinner."
+        d "Nothing happened after that?"
+        wi "Hmm{w=0.3}, an argument broke out while I played cards with Scott and Wayne."
+        d "Over what?"
+        wi "Well, Wayne accused me and Scott of cheating. He's an extremely sore loser with quite a temper."
+        d "Were you cheating?"
+        wi "Of course not, he just a terrible poker face."
