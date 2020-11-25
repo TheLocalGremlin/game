@@ -1,9 +1,4 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define d = Character("Detective")
+﻿define d = Character("Detective")
 define mi = Character("Michael Alston")
 define s = Character("Stuart Baldwin")
 define ma = Character("Marcella Alston")
@@ -52,7 +47,7 @@ menu interogationChoice:
 menu interogationMichael:
     "What would you like to ask?"
 
-    "Relationship with Scott Alston":
+    "Relationship to Scott Alston":
         d "Mr. Alston, how would you describe your relationship with your father?"
         show michael neutral
         mi "He was a good man, if a bit...{w=0.3} let's say emotionally distant."
@@ -220,7 +215,7 @@ label interogationMarcellaIntro:
 menu interogationMarcella:
     "What would you like to ask?"
 
-     "Relationship with Scott Alston":
+    "Relationship to Scott Alston":
         show marcella neutral
         d "Can you tell me about your relationship with your husband?"
         ma "He wasnt't the same charming buisinessman I met in France.{w=0.3} The man who promised me the world and took me back to America with him."
@@ -288,7 +283,7 @@ menu interogationMarcella:
 menu interogationCecil:
     "What would you like to ask?"
 
-    "Relationship with Scott Alston":
+    "Relationship to Scott Alston":
         show cecil neutral
         d "Can you explain how you knew Mr. Alston."
         c "I tutored his son in college{w=0.3}, we shared a physics class and were quite close."
@@ -376,7 +371,7 @@ label interogationWilburIntro:
 menu interogationWilbur:
     "What would you like to ask?"
 
-    "Relationship with Scott.":
+    "Relationship to Scott Alston.":
         d "Could you please explain what your relationship was to Scott Alston."
         wi "Ah yes, Scott and I were college friends you see."
         wi "We got to know each other during our economics classes and we kept in contact after we graduated."
@@ -411,3 +406,30 @@ menu interogationWilbur:
         wi "Well, Wayne accused me and Scott of cheating. He's an extremely sore loser with quite a temper."
         d "Were you cheating?"
         wi "Of course not, he just a terrible poker face."
+        jump interogationWilbur
+
+    "That's all for now":
+        jump interogationChoice
+
+menu interogationWayne:
+    "What would you like to ask?"
+
+    "Relationship to Scott Alston":
+        d "How did you know Scott Alston?"
+        wa "Scott was a weapons contract. We got in contact because of his contract with the military, I was one of the people on our end handling buisiness."
+        d "You must've gotten close to be invited to his birthday dinner."
+        wa "Yeah. We got to know each other pretty well, it's good to maintain good relations with your contractor."
+        d "So there was a buisiness angle to your friendship?"
+        wa "There's always a buisiness angle with these people."
+        d "These people?"
+        wa "Buisiness people! Contractors, designers, all of them. It's part of the deal."
+        d "You don't seem to have the highest regard for them."
+        wa "You got that right.{w=0.3} I would they weren't cowards."
+        d "Cowards?"
+        wa "Have you ever seen a buisiness man drafted? Or their families for that matter?"
+        wa "Always a private doctor there to let them of the hook with some rare medical condition for the right amount of money."
+        d "I see."
+        jump interogationWayne
+
+    "Whereabouts that night":
+        
