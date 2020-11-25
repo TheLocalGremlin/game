@@ -432,4 +432,54 @@ menu interogationWayne:
         jump interogationWayne
 
     "Whereabouts that night":
+        d "So what happened that night?"
+        wa "Scott's faliure of a son started an argument again so I told him to shut it."
+        d "Was this during the dinner?"
+        wa "Yeah, it was."
+        d "And what happened after that?"
+        wa "We played some cards, had us a drink."
+        d "Who's we?"
+        wa "Me, and those cheating worms Scott and Wyatt."
+        d "Cheating?"
+        wa "Yes! They were obviously cheating, they won every roundwe played!"
+        d "You must've been quiet annoyed."
+        wa "Yeah, I was furious! A bunch of con-men, that's what they are!"
         
+menu interogationIvy:
+    "What would you like to ask?"
+
+    "Relationship to Scott Alston":
+        d "So{w=0.3}, how did you know Scott Alston?"
+        i "We were introduced through a couple of Scott's work friends at a party one night and we had been{w=0.3}...friendly ever since."
+        d "With all due respect Ms. Galloway, I'm afraid we have multiple witnesses."
+        d "They can pin you two at the Hotel Nova, the Sanctum Spa and Resort, the Atlantis Summit Hotel, the Lavish Chateau and the Eclipse. Just to name a few."
+        i "Then why through this song and dance of asking me when you've already made up your mind detective?"
+        d "It's just procedure. So?"
+        i "A lady doesn't kiss and tell."
+        d "There's something to tell then?"
+        i "Interpret that as you will detective."
+        jump interogationIvy
+
+    "Whereabouts that night":
+        d "Can you tell me what happened that night?"
+        i "Certainly detective."
+        i "There was an argument between Scott and his son, Michael, during dinner."
+        d "Did you take any sides?"
+        i "Of course not, who wants to get in between a boy's squabble? I merely observed."
+        d "And after that?"
+        i "I'm afraid I got into a squabble myself, with Mrs. Alston herself."
+        d "About what?"
+        i "She accused me of having an affair with her husband."
+        d "And?"
+        i "I defended myself, of course."
+        d "You denied the affair?"
+        i "I said I defended myself."
+        i "After that I went on a walk around the grounds to calm myself down."
+        d "Did anyone see you?"
+        i "I do not believe so."
+        d "So we don't have anyone to verify that."
+        d "Did anything else happen that night?"
+        i "I saw Michael on the way in.{w=0.3} He looked awful so I helped him back to his room."
+        d "Did anything happen with him?"
+        i "He was rather drunk."
+        i "The poor boy could barely handle himself anymore, let alone a woman."
