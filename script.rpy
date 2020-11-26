@@ -12,6 +12,7 @@ default MichaelDC = False
 default StuartDC = False
 default MarcellaDC = False
 default CecilDC = False
+default IvyDC = False
 
 label start:
     scene bg room
@@ -41,7 +42,7 @@ menu interogationChoice:
     "Ivy Galloway":
         jump interogationIvy
 
-    "That's it for now":
+    "That's all for now":
         return
 
 menu interogationMichael:
@@ -102,7 +103,9 @@ menu interogationMichael:
         hide michael
         jump interogationMichael
 
-    "Do you believe your father ran the company well?" if MichaelDC == True:
+    "Push how Scott ran the company" if MichaelDC == True:
+        show michael neutral
+        d "In your honest opinion, do you think that your father ran the company well?"
         show michael smug
         mi "Of course,{w=0.3} you can't grow one of the biggest weapons manufacturing company overnight."
         show michael happy
@@ -120,7 +123,9 @@ menu interogationMichael:
         hide michael
         jump interogationMichael
 
-    "Do you believe that the company is still in good condition?" if MichaelDC == True:
+    "Push on condition of company" if MichaelDC == True:
+        show michael neutral
+        d "Do you think the company is still in good condidtion?"
         show michael happy
         mi "I do detective. With the right direction, our company could flourish again."
         d "And you were next in line to inherit the company should your father pass.{w=0.3} Correct?"
@@ -128,9 +133,10 @@ menu interogationMichael:
         show michael anger
         mi "Wait.{w=0.3} I wouldn't actually kill my father just to inherit his company though!"
         d "We'll see, Mr. Alston."
+        hide michael
         jump interogationMichael
 
-    "That's it for now":
+    "That's all for now":
         jump interogationChoice
 
 
@@ -182,7 +188,7 @@ menu interogationStuart:
         show stuart anger
         s "Oh let me tell you detective, it was absolutely outrageous. All those years of service and not a single word of gratitude."
         d "Sounds like you were bitter towards Mr. Alston."
-        s "Just biter is just rich. At times  I could barely stand him and his self-centered, arrogant world views."
+        s "Bitter is just rich. At times  I could barely stand him and his self-centered, arrogant world views."
         s "And the {i}nerve{/i} to TELL ME I'M A BAD BUTLER!"
         show stuart proud
         s "Oh."
@@ -194,7 +200,7 @@ menu interogationStuart:
         hide stuart
         jump interogationStuart
 
-    "That's it for now":
+    "That's all for now":
         jump interogationChoice
 
 label interogationMarcellaIntro:
@@ -268,7 +274,7 @@ menu interogationMarcella:
         ma "Of course, I knew he was up to something and after sending the fool to bed I searched the room and sure as day I found a hairpin in the rug."
         d "And you believe it was Ms. Galloway?"
         show marcella neutral
-        ma "Yes, the problems only started after he spending more tiem with her and that night only proved my suspicions."
+        ma "Yes, the problems only started after he spending more time with her and that night only proved my suspicions."
         d "How did he and Ms. Galloway know each other?"
         ma "He was introduced to her through his work associates and...they quickly became close"
         d "You must have been quite angry with your husband after finding out that he was cheating on you."
@@ -277,7 +283,7 @@ menu interogationMarcella:
         hide marcella
         jump interogationMarcella
 
-    "That's it for now":
+    "That's all for now":
         jump interogationChoice
 
 menu interogationCecil:
@@ -313,7 +319,7 @@ menu interogationCecil:
         hide cecil
         jump interogationCecil
 
-    "Push relationship with Scott Alston" if CecilDC = True:
+    "Push relationship with Scott Alston" if CecilDC == True:
         show cecil neutral
         d "You said that Scott was paying you to research new alternatives for weapons?."
         c "Among other things. Yes, he was."
@@ -337,7 +343,7 @@ menu interogationCecil:
         hide cecil
         jump interogationCecil
         
-    "Push relationship with Michael Alston" if CecilDC = True:
+    "Push relationship with Michael Alston" if CecilDC == True:
         show cecil neutral
         d "You said that you were friends with Michael Alston in college?"
         c "Yes, we were dormmates our first year and stayed friends for the rest of our education."
@@ -353,6 +359,7 @@ menu interogationCecil:
         d "So, to put it  into perspective. You'd benefit greatly from Mr. Scott Alston's death?"
         show cecil surprise
         c "I-I don't like your insinuation here detective."
+        hide cecil
         jump interogationCecil
 
     "That's all for now":
@@ -444,6 +451,10 @@ menu interogationWayne:
         wa "Yes! They were obviously cheating, they won every roundwe played!"
         d "You must've been quiet annoyed."
         wa "Yeah, I was furious! A bunch of con-men, that's what they are!"
+        jump interogationWayne
+
+    "That's all for now":
+        jump interogationChoice
         
 menu interogationIvy:
     "What would you like to ask?"
@@ -458,6 +469,7 @@ menu interogationIvy:
         i "A lady doesn't kiss and tell."
         d "There's something to tell then?"
         i "Interpret that as you will detective."
+        $IvyDC = True
         jump interogationIvy
 
     "Whereabouts that night":
@@ -483,3 +495,22 @@ menu interogationIvy:
         d "Did anything happen with him?"
         i "He was rather drunk."
         i "The poor boy could barely handle himself anymore, let alone a woman."
+        jump interogationIvy
+
+    "Push relationship with Scott Alston" if IvyDC == True:
+        d "So, you mentioned that you were introduced to Scott through his work associates?"
+        i "Yes, I was."
+        d "Could you tell me how you knew them?"
+        i "I would but I feel like you already know."
+        d "We have evidence of you being associated with several men with wealth or in power."
+        d "All of them were drained financially during the periods in which you were with them."
+        i "And you think I was doing the same to Scott?"
+        d "We have his financial reccords from 2 months back, the same amount of time you've known Mr. Alston and they show they same decline."
+        d "Although, recently the decline flattened out.{w=0.3} Let me give you a hypothetical."
+        d "You and Scott Alston are having an affair and you've been draining him dry of all his money."
+        d "He figures that out and there's an argument.{w=0.3} The argument turns into a fight and soon that fight turns physical and before you know it, you've killed him."
+        i "That{w=0.3}, that's preposterous."
+        jump interogationIvy
+
+    "That's all for now":
+        jump interogationChoice
