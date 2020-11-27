@@ -366,24 +366,32 @@ menu interogationCecil:
         jump interogationChoice
 
 label interogationWilburIntro:
+    show wilbur neutral
     d "Mr. Wyatt, welcome."
     wi "Can I call my lawyer?"
     d "You won't be needing them, we just want to ask you a few questions."
+    show wilbur disdain
     wi "I don't think that would be wise.{w=0.3} I've always been told to contact my attorney should I ever end up in a conversation with the authorities."
     d "I just need a bit of information. Otherwise I'd have to keep you here until your lawyer arrived."
     d "And that would take some time."
+    show wilbur neutral
     wi "That's{w=0.3}...true. Perhaps I could answer some questions."
     wi "Fine."
+    hide wilbur
 
 menu interogationWilbur:
     "What would you like to ask?"
 
     "Relationship to Scott Alston.":
+        show wilbur neutral
         d "Could you please explain what your relationship was to Scott Alston."
         wi "Ah yes, Scott and I were college friends you see."
+        show wilbur happy
         wi "We got to know each other during our economics classes and we kept in contact after we graduated."
         d "From what I understand, you and Mr. Alston were rivals."
+        show wilbur neutral
         wi "Professionally, but not privately."
+        show wilbur disdain
         wi "At least, that's how it used to be"
         d "Oh? How so?"
         wi "I hate to admit it{w=0.3}, but lately he had been treating our friendly rivalry more seriously."
@@ -391,28 +399,36 @@ menu interogationWilbur:
         wi "He's put my company under more pressure and to be quite frank, it's been taxing trying to keep up."
         wi "I've lost quite a few customers due to his backhandedness."
         d "Did you ever confront him about it?"
+        show wilbur anger
         wi "And let him know he was getting under my skin? Of course not!"
+        show wilbur disdain
         wi "Besides, it was quite obvious that he knew what he was doing. He's been extremely smug."
         wi "He knew he was forcing me out of buisiness."
         d "You must have felt betrayed."
         wi "I did, detective.{w=0.3} It was always us two running the scene, u til he decided to stab me in the back."
         wi "He started lowering prices and actively started encroaching on my own usual buyers."
         d "That must have felt unfair."
+        show wilbur anger
         wi "Of course it did.{w=0.3} I must be honest with you detective, the economic situation might be even worse than how I'm making it out to be."
         wi "I'm almost facing bankruptcy, I can barely even spare the expenses of the suit I'm wearing."
         d "And this was all because of Scott."
         wi "Indeed. God, I hated his guts."
+        hide wilbur
         jump interogationWilbur
 
     "Whereabouts that night.":
+        show wilbur neutral
         d "What were you doing the night of Scott Alston's death?"
         wi "Not much. The most notable thing that happened that night was probably the argument during dinner."
         d "Nothing happened after that?"
+        show wilbur disdain
         wi "Hmm{w=0.3}, an argument broke out while I played cards with Scott and Wayne."
         d "Over what?"
+        show wilbur neutral
         wi "Well, Wayne accused me and Scott of cheating. He's an extremely sore loser with quite a temper."
         d "Were you cheating?"
         wi "Of course not, he just a terrible poker face."
+        hide wilbur
         jump interogationWilbur
 
     "That's all for now":
@@ -471,32 +487,42 @@ menu interogationIvy:
     "What would you like to ask?"
 
     "Relationship to Scott Alston":
+        show ivy neutral
         d "So{w=0.3}, how did you know Scott Alston?"
         i "We were introduced through a couple of Scott's work friends at a party one night and we had been{w=0.3}...friendly ever since."
         d "With all due respect Ms. Galloway, I'm afraid we have multiple witnesses."
         d "They can pin you two at the Hotel Nova, the Sanctum Spa and Resort, the Atlantis Summit Hotel, the Lavish Chateau and the Eclipse. Just to name a few."
+        show ivy smug
         i "Then why through this song and dance of asking me when you've already made up your mind detective?"
         d "It's just procedure. So?"
+        show ivy neutral
         i "A lady doesn't kiss and tell."
         d "There's something to tell then?"
+        show ivy smug
         i "Interpret that as you will detective."
+        hide ivy
         $IvyDC = True
         jump interogationIvy
 
     "Whereabouts that night":
+        show ivy neutral
         d "Can you tell me what happened that night?"
         i "Certainly detective."
         i "There was an argument between Scott and his son, Michael, during dinner."
         d "Did you take any sides?"
+        show ivy annoyance
         i "Of course not, who wants to get in between a boy's squabble? I merely observed."
         d "And after that?"
         i "I'm afraid I got into a squabble myself, with Mrs. Alston herself."
         d "About what?"
         i "She accused me of having an affair with her husband."
         d "And?"
+        show ivy neutral
         i "I defended myself, of course."
         d "You denied the affair?"
+        show ivy smug
         i "I said I defended myself."
+        show ivy neutral
         i "After that I went on a walk around the grounds to calm myself down."
         d "Did anyone see you?"
         i "I do not believe so."
@@ -505,22 +531,29 @@ menu interogationIvy:
         i "I saw Michael on the way in.{w=0.3} He looked awful so I helped him back to his room."
         d "Did anything happen with him?"
         i "He was rather drunk."
+        show ivy annoyance
         i "The poor boy could barely handle himself anymore, let alone a woman."
+        hide ivy
         jump interogationIvy
 
     "Push relationship with Scott Alston" if IvyDC == True:
+        show ivy neutral
         d "So, you mentioned that you were introduced to Scott through his work associates?"
         i "Yes, I was."
         d "Could you tell me how you knew them?"
+        show ivy smug
         i "I would but I feel like you already know."
         d "We have evidence of you being associated with several men with wealth or in power."
+        show ivy neutral
         d "All of them were drained financially during the periods in which you were with them."
         i "And you think I was doing the same to Scott?"
         d "We have his financial reccords from 2 months back, the same amount of time you've known Mr. Alston and they show they same decline."
         d "Although, recently the decline flattened out.{w=0.3} Let me give you a hypothetical."
         d "You and Scott Alston are having an affair and you've been draining him dry of all his money."
+        show ivy annoyance
         d "He figures that out and there's an argument.{w=0.3} The argument turns into a fight and soon that fight turns physical and before you know it, you've killed him."
         i "That{w=0.3}, that's preposterous."
+        hide ivy
         jump interogationIvy
 
     "That's all for now":
