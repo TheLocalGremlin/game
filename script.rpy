@@ -422,35 +422,46 @@ menu interogationWayne:
     "What would you like to ask?"
 
     "Relationship to Scott Alston":
+        show wayne neutral
         d "How did you know Scott Alston?"
-        wa "Scott was a weapons contract. We got in contact because of his contract with the military, I was one of the people on our end handling buisiness."
+        wa "Scott was one of our weapons contractors. We got in contact because of his contract with the military, I was one of the people on our end handling buisiness."
         d "You must've gotten close to be invited to his birthday dinner."
         wa "Yeah. We got to know each other pretty well, it's good to maintain good relations with your contractor."
         d "So there was a buisiness angle to your friendship?"
+        show wayne anger
         wa "There's always a buisiness angle with these people."
         d "These people?"
         wa "Buisiness people! Contractors, designers, all of them. It's part of the deal."
         d "You don't seem to have the highest regard for them."
+        show wayne fury
         wa "You got that right.{w=0.3} I would they weren't cowards."
         d "Cowards?"
         wa "Have you ever seen a buisiness man drafted? Or their families for that matter?"
-        wa "Always a private doctor there to let them of the hook with some rare medical condition for the right amount of money."
+        show wayne anger
+        wa "Always a private doctor there to let them off the hook with some rare medical condition for the right amount of money."
         d "I see."
+        hide wayne
         jump interogationWayne
 
     "Whereabouts that night":
+        show wayne neutral
         d "So what happened that night?"
+        show wayne anger
         wa "Scott's faliure of a son started an argument again so I told him to shut it."
         d "Was this during the dinner?"
+        show wayne neutral
         wa "Yeah, it was."
         d "And what happened after that?"
         wa "We played some cards, had us a drink."
         d "Who's we?"
         wa "Me, and those cheating worms Scott and Wyatt."
+        show wayne anger
         d "Cheating?"
-        wa "Yes! They were obviously cheating, they won every roundwe played!"
+        show wayne fury
+        wa "Yes! They were obviously cheating, they won every round we played!"
         d "You must've been quiet annoyed."
         wa "Yeah, I was furious! A bunch of con-men, that's what they are!"
+        hide wayne
         jump interogationWayne
 
     "That's all for now":
